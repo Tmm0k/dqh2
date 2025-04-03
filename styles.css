@@ -1,0 +1,110 @@
+.navbar {
+    background-color: white;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    z-index: 1000;
+    height: 70px;
+    display: flex;
+    align-items: center;
+    padding: 0 2rem;
+}
+
+/* Mobile-first styles for product info header */
+.product-info-header {
+    padding: 1rem;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    background-image: url('images/product-info-header-mobile-bg.webp');
+    background-size: auto 662px;
+    background-position: center center;
+    background-repeat: no-repeat;
+    position: relative;
+    height: 662px;
+}
+
+.product-info-header-content {
+    margin-bottom: 2rem;
+    width: 100%;
+    padding-top: 4rem;
+    position: relative;
+    z-index: 2;
+}
+
+.product-info-header-content h4 {
+    margin: 0;
+    font-size: 2rem;
+    line-height: 1.3;
+    color: #4A4A4A;
+}
+
+/* Tablet breakpoint */
+@media (min-width: 768px) {
+    .product-info-header {
+        background-image: url('images/product-info-header-bg-tablet.webp');
+        background-size: auto 662px;
+        background-position: center center;
+        background-repeat: no-repeat;
+        padding: 1.5rem;
+        flex-direction: row;
+        justify-content: space-between;
+        align-items: center;
+        text-align: left;
+    }
+
+    .product-info-header-content {
+        margin-bottom: 0;
+        width: 45%;
+    }
+
+    .product-bags-container {
+        width: 50%;
+    }
+}
+
+/* Desktop breakpoint */
+@media (min-width: 992px) {
+    .product-info-header {
+        padding: 2rem;
+        max-width: 1200px;
+        margin: 0 auto;
+        background-image: url('images/desktop-product-info-header-bg.webp');
+        background-size: auto 662px;
+        background-position: right center;
+        background-repeat: no-repeat;
+        justify-content: flex-start;
+        gap: 2rem;
+    }
+
+    .product-info-header-content {
+        width: 30%;
+        margin-left: 2rem;
+    }
+
+    .product-info-header-content h4 {
+        font-size: 2.5rem;
+    }
+
+    .product-bags-container {
+        width: 35%;
+        margin-right: auto;
+    }
+}
+
+/* Product bags container with absolute image positioning */
+.product-bags-container {
+    position: relative;
+}
+
+.product-bags-container img[src*='dquin-product-bags.webp'] {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
